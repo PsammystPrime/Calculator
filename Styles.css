@@ -9,25 +9,15 @@ body{
   display: flex;
 }
 
-.input{
-    width: 160px;
+.input,.show{
+    width: 212px;
     height: 25px;
-    border: 1px solid red;
     background-color: aqua;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
-.show{
-    width: 160px;
-    height: 25px;
-    border: 1px solid red;
-    background-color: rgb(136, 135, 222);
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
 
 button{
     justify-content: center;
@@ -37,4 +27,7 @@ button{
     border: 1px solid greenyellow;
 }
 
+#equals,.clear{
+    width: 104px;
+}
 

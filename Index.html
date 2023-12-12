@@ -10,12 +10,16 @@
 <body>
     <h1>My Calculator</h1>
     <div class="calculator">
+
         <div class="display">
-            <button class="clear">C</button>
-            <div class="input"></div>
-            <div class="show"></div>
-            <button class="delete">D</button>
+            <div class="screens">
+              <div class="show"></div>
+              <div class="input"></div>            
+            </div>
+           
+            
         </div>
+
 
     <div class="buttons">
         <div class="row">
@@ -43,8 +47,13 @@
         <div class="row">
             <button class="decimal"  data-value=".">.</button>
             <button class="number"   data-value="0">0</button>
-            <button class="equals"   data-value="=">=</button>
-            <button class="operator" data-value="/">/</button>
+                        <button class="operator" data-value="/">/</button>
+            <button class="delete">D</button>
+        </div>
+        <div class="row">
+            <button class="clear">C</button>
+            <button class="equals" id="equals"  data-value="=">=</button>
+            
         </div>
     </div>
     </div>
