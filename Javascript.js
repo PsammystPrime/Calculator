@@ -1,5 +1,7 @@
 const buttons = document.querySelectorAll('button')
-const screen = document.querySelector('.input')
+const previousScreen = document.querySelector('.input')
+const operator= document.querySelector('.operator')
+const  currentScreen= document.querySelector('.inputB')
 
 //add event listers for all buttons
 buttons.forEach(button => {
@@ -8,15 +10,21 @@ buttons.forEach(button => {
       
      
       if (value === 'C') {
-        screen.innerText = ''
-      }
-      else if (value === '.') {
-        if (!screen.innerText.includes('.')) {
-          screen.innerText  +=value 
-        }
+        previousScreen.textContent = '';
+      }else if (value === 'D') {
+        previousScreen.textContent = previousScreen.textContent.slice(0, -1);
+      }else if (value === '.') {
+        if (!previousScreen.textContent.includes('.')) {
+          previousScreen.textContent  +=value; 
+        };
+      }else if (value==='*'||value==='/'||value==='+'||value==='-') {
+        currentScreen.textContent = previousScreen.textContent + value
+        previousScreen.textContent=''
+      
       }else {
-         screen.innerText  +=value
+         previousScreen.textContent  +=value;
       }
+      
 
     })       
 });
