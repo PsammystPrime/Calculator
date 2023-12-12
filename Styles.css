@@ -27,6 +27,15 @@ body{
     justify-content: flex-end;
     align-items: flex-end;
 }
+.inputC{
+    width: 160px;
+    height: 50px;
+    border: 1px solid red;
+    background-color: rgb(136, 135, 222);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
 
 button{
     justify-content: center;
