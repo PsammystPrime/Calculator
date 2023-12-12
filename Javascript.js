@@ -5,10 +5,17 @@ const screen = document.querySelector('.input')
 buttons.forEach(button => {
     button.addEventListener('click', function (e) {
       const value = e.target.innerHTML  
-      screen.innerText  +=value 
+      
      
       if (value === 'C') {
         screen.innerText = ''
+      }
+      else if (value === '.') {
+        if (!screen.innerText.includes('.')) {
+          screen.innerText  +=value 
+        }
+      }else {
+         screen.innerText  +=value
       }
 
     })       
