@@ -65,7 +65,7 @@ img{
     padding-top: 30px;
 }
 
-.dark .display{
+.dark,.show,.input{
     background-color: #37474F;
     color: #cccccc;
 }
@@ -119,19 +119,6 @@ img{
     transition: .4s;
   }
   
-  input:checked + .slider {
-    background-color: #37474F;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #37474F;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
   
   .slider.round {
     border-radius: 34px;
