@@ -19,8 +19,8 @@ numberButtons.forEach(button => {
 
 array.push(value.toString(''))
 const newArr=array.toString()
-console.log(newArr)
-console.log(array)
+//console.log(newArr)
+//console.log(array)
  });
 });
 
