@@ -1,78 +1,76 @@
-const display =document.querySelector('.input');
-const buttons =document.querySelectorAll('.number');
-const decimal = document.querySelector('.decimal')
-const operator = document.querySelectorAll('.operator')
-const equal = document.querySelector('.equals')
-const clear = document.querySelector('.clear')
-const del = document.querySelector('.delete')
-const one = []
-const two = []
-const show = document.querySelector('.show')
-const array= []
+const displayCalculations =document.querySelector('.input');
+const showCalculations = document.querySelector('.show');
+const numberButtons =document.querySelectorAll('.number');
+const decimal = document.querySelector('.decimal');
+const operator = document.querySelectorAll('.operator');
+const equal = document.querySelector('.equals');
+const clear = document.querySelector('.clear');
+const del = document.querySelector('.delete');
+const one = [];
+const two = [];
+const array= [];
 
 
-
-buttons.forEach(button => {
+numberButtons.forEach(button => {
  button.addEventListener('click', function(e) {
   let value = e.target.innerHTML
-  display.textContent += value
-  show.textContent += value
+  displayCalculations.textContent += value
+  showCalculations.textContent += value
 
 array.push(value.toString(''))
 const newArr=array.toString()
 console.log(newArr)
 console.log(array)
- })
+ });
 });
 
 
 operator.forEach(operator =>{
   operator.addEventListener('click', (e)=>{
   let value = e.target.innerHTML
-two.textContent = display.textContent
-display.textContent = ''
+two.textContent = displayCalculations.textContent
+displayCalculations.textContent = ''
 one.textContent = value
-show.textContent += value
+showCalculations.textContent += value
   });
 });
 
 equal.addEventListener('click', ()=>{
   let a = Number(two.textContent)
   let b =one.textContent
-  let c = Number(display.textContent)
+  let c = Number(displayCalculations.textContent)
   if (b==='*') {function multiply(){
-display.textContent= a*c
+displayCalculations.textContent= a*c
   }
     multiply()
   }
   if (b==='/') {
-    return display.textContent= a/c
+    return displayCalculations.textContent= a/c
   }
   if (b==='+') {
-  return display.textContent= a+c
+  return displayCalculations.textContent= a+c
 
   }
   if (b==='-') {
-    return display.textContent= a-c
+    return displayCalculations.textContent= a-c
   }  
 });
 
 clear.addEventListener('click', ()=>{
-  display.textContent = ''
+  displayCalculations.textContent = ''
   one.textContent = ''
   two.textContent = ''
-  show.textContent = ''
-})
+  showCalculations.textContent = ''
+});
 
 del.addEventListener('click', ()=>{
-  display.textContent = display.textContent.slice(0,-1)
-})
+  displayCalculations.textContent = displayCalculations.textContent.slice(0,-1)
+});
 
 decimal.addEventListener('click', (e)=>{
   let value = e.target.innerHTML
-  if (!display.textContent.includes('.')){
-
-    display.textContent +=value
-  
+  if (!displayCalculations.textContent.includes('.')){
+    displayCalculations.textContent +=value
+    showCalculations.textContent += value
   }
-})
+});
