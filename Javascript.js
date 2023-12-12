@@ -74,3 +74,8 @@ decimal.addEventListener('click', (e)=>{
     showCalculations.textContent += value
   }
 });
+
+function switchColor(){
+  let element = document.body;
+  element.classList.toggle("dark");
+}
