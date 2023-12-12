@@ -4,13 +4,14 @@ const decimal = document.querySelector('.decimal')
 const operator = document.querySelectorAll('.operator')
 const equal = document.querySelector('.equals')
 const clear = document.querySelector('.clear')
+const del = document.querySelector('.delete')
 const one = []
 const two = []
 const show = document.querySelector('.show')
 const array= []
 
 
-//add event listeners for each button
+
 buttons.forEach(button => {
  button.addEventListener('click', function(e) {
   let value = e.target.innerHTML
@@ -61,6 +62,10 @@ clear.addEventListener('click', ()=>{
   one.textContent = ''
   two.textContent = ''
   show.textContent = ''
+})
+
+del.addEventListener('click', ()=>{
+  display.textContent = display.textContent.slice(0,-1)
 })
 
 decimal.addEventListener('click', (e)=>{
