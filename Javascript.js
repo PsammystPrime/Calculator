@@ -40,7 +40,7 @@ equal.addEventListener('click', ()=>{
   let b =one.textContent
   let c = Number(displayCalculations.textContent)
   if (b==='*') {function multiply(){
-displayCalculations.textContent= a*c
+  displayCalculations.textContent= a*c
   }
     multiply()
   }
@@ -64,7 +64,8 @@ clear.addEventListener('click', ()=>{
 });
 
 del.addEventListener('click', ()=>{
-  displayCalculations.textContent = displayCalculations.textContent.slice(0,-1)
+  displayCalculations.textContent = displayCalculations.textContent.slice(0,-1),
+  showCalculations.textContent = showCalculations.textContent.slice(0,-1)
 });
 
 decimal.addEventListener('click', (e)=>{
